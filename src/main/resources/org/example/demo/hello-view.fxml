@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" prefHeight="647.0" prefWidth="288.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.AdvancedLocalizationController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Job Titles">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Text>
+    <AnchorPane xmlns:fx="http://javafx.com/fxml/1">
+        <ComboBox fx:id="languageSelector" layoutX="99.0" layoutY="1.0" />
+    </AnchorPane>
+    <Label fx:id="welcomeText" />
+    <ListView fx:id="employeeList" prefHeight="215.0" prefWidth="248.0" />
+
+
+
+    <VBox prefHeight="73.0" prefWidth="248.0">
+        <children>
+            <TextField fx:id="translationKeyTextField" promptText="Enter Job Title Key"/>
+        </children>
+    </VBox>
+    <VBox prefHeight="54.0" prefWidth="248.0">
+        <children>
+            <TextField fx:id="translationEnterTextField" promptText="Enter Translation"/>
+        </children>
+    </VBox>
+
+   <Button fx:id="updateTranslationBtn" mnemonicParsing="false" prefHeight="48.0" prefWidth="196.0" text="Add/Update Translation" onAction="#onUpdateTranslationButtonClick">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+</VBox>
